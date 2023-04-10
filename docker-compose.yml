@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  github-actions-runner:
+    build:
+      args:
+        - RUNNER_NAME
+        - RUNNER_GROUP
+        - RUNNER_VERSION
+        - RUNNER_URL
+        - RUNNER_TOKEN
+    container_name: github-actions-runner
+    restart: always
